@@ -7,8 +7,8 @@ router.get("/:level", async (req, res) => {
   const { level } = req.params;
   const quantity = gachaLevelQuantity[level];
 
-  const randomPosition = await getRandomPositionByRarity(quantity);
-  res.status(200).json({ randomPosition, level });
+  const objectNumber = await getRandomPositionByRarity(quantity);
+  res.status(200).json({ objectNumber, level });
 });
 
 module.exports = router;
